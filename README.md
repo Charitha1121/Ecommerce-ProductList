@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# Product-Listing-Page
+#  E-Commerce Product Listing (React + TypeScript )
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **pixel-accurate recreation** of a product listing page from a Figma design.  
+It features reusable components, filters, sorting, pagination, and full responsiveness across devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## Expanding the ESLint configuration
+- **Reusable Components**: Navbar, Sidebar, ProductCard, Rating, Pagination, Footer.  
+- **Sidebar Filters**: Expand/collapse categories & colors, with a responsive drawer on mobile.  
+- **Product Grid**: Uniform product cards with image, HOT badge, price, discount, and rating.  
+- **Sorting & Pagination**: Sort by name, price, or popularity with 6 products per page.  
+- **Color Filter**: Select colors to visually update product cards.  
+- **Responsive Design**: Desktop, tablet, and mobile support.  
+- **Mock Data**: 24+ products with fields like `id, name, price, discountPrice, discountPercent, ratingValue, ratingCount, isHot, colors, category, imageUrl`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
+##  Project Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+src/
+ ├─ components/
+ │   ├─ Navbar.tsx
+ │   ├─ Sidebar.tsx
+ │   ├─ ProductCard.tsx
+ │   ├─ Rating.tsx
+ │   ├─ Pagination.tsx
+ │   └─ Footer.tsx
+ ├─ data/
+ │   └─ products.ts
+ ├─ App.tsx
+ ├─ main.tsx
+ └─ index.css
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##  Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React + TypeScript  
+- CSS (styling)  
+- Lucide React (icons)  
+- Vite (build & dev server)  
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Getting Started
+
+1. **Clone Repo**
+   ```bash
+   git clone https://github.com/your-username/Ecommerce-ProductList.git
+   cd Ecommerce-ProductList
 
