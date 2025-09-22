@@ -1,5 +1,3 @@
-// src/components/FilterPanel.tsx
-import React from "react";
 type Props = {
   categories: string[];
   selectedCategory:string | null;

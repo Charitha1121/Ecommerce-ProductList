@@ -1,4 +1,3 @@
-// src/components/SortOptions.tsx
 type Props = {
   sortValue: string;
   onChange: (value: string) => void;
